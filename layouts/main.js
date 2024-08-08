@@ -15,7 +15,9 @@ export default function MainLayout({ children, className }) {
       <Header />
       <div className="flex">
         <div className="w-3/12">
-          <ShopFilter />
+          <div className="sticky top-10">
+            <ShopFilter />
+          </div>
         </div>
         <div className="w-10/12">
           <div>
