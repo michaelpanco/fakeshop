@@ -5,6 +5,7 @@ import Image from "next/image";
 import Rating from "@/components/Common/Rating";
 import Link from "next/link";
 import ShopComments from "@/components/ShopComments";
+import { FaChevronLeft } from "react-icons/fa6";
 export default function ShopDetails({
   id,
   title,
@@ -18,8 +19,11 @@ export default function ShopDetails({
 }) {
   return (
     <div className={cn("", className)}>
-      <div className="mb-5">
-        <Link href="/">Back to Products</Link>
+      <div className="mb-5 flex items-center gap-2">
+        <FaChevronLeft />
+        <Link href="/" className="hover:underline">
+          Back to Products{" "}
+        </Link>
       </div>
       <div className="flex gap-x-5">
         <div className="w-4/12 relative h-[400px]">
