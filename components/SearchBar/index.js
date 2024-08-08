@@ -7,7 +7,7 @@ import Link from "next/link";
 import CircularLoader from "@/components/Common/Loader/Circular";
 import { searchProducts } from "@/state/product/productSlice";
 import { useAppDispatch } from "@/lib/hooks";
-
+import { slugify } from "@/lib/utils";
 export default function SearchBar({ className }) {
   const dispatch = useAppDispatch();
   const [searchingSuggestion, setSearchingSuggestion] = useState(false);
@@ -80,7 +80,9 @@ export default function SearchBar({ className }) {
                       itemSuggestions?.map((suggestion, index) => {
                         return (
                           <div key={index} className="mb-2">
-                            <Link href="/hey">{suggestion}</Link>
+                            <Link href={`${slugify(suggestion)}`}>
+                              {suggestion}
+                            </Link>
                           </div>
                         );
                       })

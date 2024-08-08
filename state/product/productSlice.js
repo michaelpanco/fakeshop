@@ -29,7 +29,6 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     filterProducts: (state, action) => {
-      console.log(action, "action");
       if (action.payload.categories) {
         state.filteredCategories = action.payload.categories;
       }
@@ -37,8 +36,6 @@ const productSlice = createSlice({
       const currentState = current(state);
 
       const filteredProducts = currentState.products.filter((product) => {
-        //console.log(product, "productproductproduct");
-
         const filterCategory = action.payload.categories.includes(
           normalizeCategoryName(product.category)
         );
@@ -99,8 +96,6 @@ const productSlice = createSlice({
         const products = action.payload.map(PostDataModel.fromDto);
 
         const filteredProducts = products.filter((product) => {
-          //console.log(product, "productproductproduct");
-
           const filterCategory =
             currentState.filteredCategories.length > 0
               ? currentState.filteredCategories.includes(

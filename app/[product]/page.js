@@ -37,7 +37,6 @@ export default async function Home({ params }) {
 
     const data = await response.json();
     productDetails = data?.details;
-    console.log(productDetails, "productDetails");
   } catch (error) {}
 
   return <PageClient product={productDetails} />;

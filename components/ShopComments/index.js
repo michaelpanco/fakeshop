@@ -12,7 +12,6 @@ export default function ShopComments({ className, shopid }) {
 
   const [errors, setErrors] = useState([]);
 
-  console.log(reviewsArr, "reviewsArr");
   const reviewOnChange = (event) => {
     setReviewText(event.target.value);
   };

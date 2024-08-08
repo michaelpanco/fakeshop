@@ -28,7 +28,6 @@ export default function ShopFilter({ className }) {
   };
 
   useEffect(() => {
-    //console.log(enabledCategories, "enabledCategories");
     dispatch(filterProducts({ categories: enabledCategories }));
   }, [enabledCategories]);
 
@@ -41,8 +40,7 @@ export default function ShopFilter({ className }) {
     const [minPrice, maxPrice] = pricing;
     setMinPrice(minPrice);
     setMaxPrice(maxPrice);
-    console.log(minPrice, "minPrice");
-    console.log(maxPrice, "maxPrice");
+
     dispatch(filterProductsPricing({ minPrice: minPrice, maxPrice: maxPrice }));
   };
 
