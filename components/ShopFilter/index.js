@@ -47,7 +47,7 @@ export default function ShopFilter({ className }) {
   };
 
   return (
-    <div className={cn("w-full pr-5", className)}>
+    <div className={cn("w-full lg:pr-5", className)}>
       <div className="mb-2 font-medium">Filter by categories</div>
       <div className="text-gray-500 mb-5">
         <input
@@ -92,7 +92,7 @@ export default function ShopFilter({ className }) {
         <br />
       </div>
       <hr />
-      <div className="relative pr-5 mt-5">
+      <div className="relative pr-5 mt-5 h-[80px] lg:h-auto">
         <div className="flex justify-between">
           <div className="mb-2 font-medium">Price range filter:</div>
           <div className="font-bold">

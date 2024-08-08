@@ -110,7 +110,7 @@ export default function ShopComments({ className, shopid }) {
             )}
           </div>
 
-          <button className="bg-[#eaeaea] hover:bg-black hover:text-white px-3 py-3 rounded-xl min-w-[200px]">
+          <button className="bg-[#eaeaea] hover:bg-black hover:text-white px-3 py-3 rounded-xl w-full lg:w-[200px]">
             Submit
           </button>
         </form>

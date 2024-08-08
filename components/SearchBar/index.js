@@ -52,14 +52,14 @@ export default function SearchBar({ className }) {
   const debounced = useCallback(debounce(fetchData, 500), []);
 
   return (
-    <div className={cn("w-full", className)}>
+    <div className={cn("w-full h-[150px] lg:h-auto", className)}>
       <form onSubmit={submitSearchHandler}>
-        <div className="flex  h-[50px] mb-5 gap-x-5">
+        <div className="flex flex-col lg:flex-row h-[50px] mb-5 gap-y-2 gap-x-5">
           <div className="flex-1 relative">
             <input
               type="text"
               placeholder="Search in Fakeshop"
-              className="border rounded-xl w-full h-full px-5 bg-white"
+              className="border rounded-xl w-full py-3 h-full px-5 bg-white "
               onChange={(e) => {
                 setInputValue(e.target.value);
                 debounced(e.target.value, 500);
@@ -93,7 +93,7 @@ export default function SearchBar({ className }) {
             )}
           </div>
 
-          <button className="bg-black text-white rounded-xl text-center min-w-[200px]">
+          <button className="bg-black text-white rounded-xl text-center py-3 min-w-[200px]">
             Search
           </button>
         </div>

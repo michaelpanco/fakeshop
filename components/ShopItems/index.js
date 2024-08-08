@@ -12,7 +12,7 @@ export default function ShopItems({ className }) {
       {productState.status === "PENDING" ? (
         <ShopItemsLoader />
       ) : (
-        <div className="grid grid-cols-4 pb-10 gap-5 ">
+        <div className="grid grid-cols-2 lg:grid-cols-4 pb-10 gap-5 ">
           {productState?.lists?.map((product, index) => {
             return (
               <ShopItemCard

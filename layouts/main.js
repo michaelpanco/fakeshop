@@ -13,13 +13,13 @@ export default function MainLayout({ children, className }) {
       )}
     >
       <Header />
-      <div className="flex">
-        <div className="w-3/12">
-          <div className="sticky top-10">
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-full lg:w-3/12">
+          <div className="lg:sticky lg:top-10">
             <ShopFilter />
           </div>
         </div>
-        <div className="w-10/12">
+        <div className="w-full lg:w-10/12">
           <div>
             <SearchBar />
           </div>

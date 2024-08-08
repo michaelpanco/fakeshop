@@ -25,12 +25,12 @@ export default function ShopDetails({
           Back to Products{" "}
         </Link>
       </div>
-      <div className="flex gap-x-5">
-        <div className="w-4/12 relative h-[400px]">
+      <div className="flex flex-col lg:flex-row gap-x-5">
+        <div className="w-full lg:w-4/12 relative h-[400px] mb-5 lg:mb-0">
           <Image src={image} fill={true} style={{ "object-fit": "contain" }} />
         </div>
 
-        <div className="w-8/12">
+        <div className="w-full lg:w-8/12">
           <div className="rounded-full bg-white border inline-block px-4 py-2 mb-2 text-black">
             {category}
           </div>
@@ -44,7 +44,7 @@ export default function ShopDetails({
             <Rating rating={rating?.rate} total={rating?.count} />
           </div>
 
-          <div className="flex gap-5 w-8/12 mb-5">
+          <div className="flex gap-5 w-full lg:w-8/12 mb-5">
             <div className="flex-1">
               <button className="bg-black text-white w-full py-4 rounded-full">
                 Buy Now
