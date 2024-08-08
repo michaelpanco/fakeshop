@@ -38,7 +38,7 @@ export default function ShopDetails({
           <div className="text-lg mb-2">{description}</div>
           <div className="font-bold text-2xl text-fuchsia-900 mb-2">
             {currencySymbol}
-            {price}
+            {price?.toFixed(2)}
           </div>
           <div className="mb-5">
             <Rating rating={rating?.rate} total={rating?.count} />

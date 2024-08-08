@@ -58,7 +58,7 @@ export default function SearchBar({ className }) {
           <div className="flex-1 relative">
             <input
               type="text"
-              placeholder="Search in Fakeshop"
+              placeholder="Search in Fakestore"
               className="border rounded-xl w-full py-3 h-full px-5 bg-white "
               onChange={(e) => {
                 setInputValue(e.target.value);

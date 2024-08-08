@@ -32,7 +32,7 @@ export default function ShopItemCard({
 
         <div className="font-bold text-lg text-fuchsia-900">
           {currencySymbol}
-          {price}
+          {price?.toFixed(2)}
         </div>
         <Rating rating={rating} total={ratingTotal} />
       </div>
