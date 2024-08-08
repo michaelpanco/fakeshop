@@ -2,6 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import Header from "@/components/Common/Header";
+import SearchBar from "@/components/SearchBar";
+import ShopFilter from "@/components/ShopFilter";
 export default function MainLayout({ children, className }) {
   return (
     <div
@@ -12,8 +14,15 @@ export default function MainLayout({ children, className }) {
     >
       <Header />
       <div className="flex">
-        <div className="w-3/12">filters</div>
-        <div className="w-10/12">{children}</div>
+        <div className="w-3/12">
+          <ShopFilter />
+        </div>
+        <div className="w-10/12">
+          <div>
+            <SearchBar />
+          </div>
+          {children}
+        </div>
       </div>
     </div>
   );

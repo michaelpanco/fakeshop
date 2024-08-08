@@ -6,13 +6,13 @@ import { useAppSelector } from "@/lib/hooks";
 import ShopItemsLoader from "@/components/ShopItems/loader";
 export default function ShopItems({ className }) {
   const productState = useAppSelector((state) => state.product);
-  console.log(productState, "productState");
+
   return (
     <div className={cn("", className)}>
       {productState.status === "PENDING" ? (
         <ShopItemsLoader />
       ) : (
-        <div className="flex gap-5 flex-wrap pb-10">
+        <div className="grid grid-cols-4 pb-10 gap-5 ">
           {productState?.lists?.map((product, index) => {
             return (
               <ShopItemCard

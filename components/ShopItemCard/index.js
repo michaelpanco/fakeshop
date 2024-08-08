@@ -13,7 +13,7 @@ export default function ShopItemCard({
   currencySymbol = "$",
 }) {
   return (
-    <div className={cn("w-[200px] border rounded-xl p-5 shadow-sm", className)}>
+    <div className={cn("border rounded-xl p-5 shadow-sm", className)}>
       <div className="flex flex-col h-full">
         <div className="relative h-[200px] w-full mb-5">
           <Image src={image} fill={true} style={{ "object-fit": "contain" }} />
